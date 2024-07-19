@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стройтранс</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" /> 
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="headerline">
+        <div class="menu">
+            <input type="checkbox" id="nav-toggle" hidden>
+            <nav class="nav">
+                <label for="nav-toggle" class="nav-toggle" onclick></label>
+                <h2 class="logo">
+                    <img src="favicon/ms-icon-144x144.png" alt="" height="70px" class="logo_menu">
+                </h2>
+                <ul class="menu_text">
+                    <li><a href="index.html">Главная</a>
+                    <li><a href="about.html">О компании</a>
+                    <li><a href="job.html">Доступные вакансии</a>
+                    <li><a href="reviews.html">Отзывы</a>
+                </ul>
+            </nav>
+        </div>
+        <div class="headerlogo">
+            <img src="favicon/ms-icon-144x144.png" alt="" class="head_logo">
+        </div>
+        <div class="button_to_form">
+            <button class="btn-open-popup" onclick="togglePopup()">
+                Заказать звонок
+            </button>
+            <div id="popupOverlay" class="overlay-container">
+                <div class="popup-box">
+                    <h2 style="color: #ff7d04;" class="make_call">Заказать звонок</h2>
+                    <form class="form-container" method="POST" action="process_forms.php">
+                        <label class="form-label" for="name">Имя:</label>
+                        <input class="form-input" type="text" placeholder="Введите ваше имя" id="name" name="name" required>
+                    
+                        <label class="form-label" for="tel">Номер телефона:</label>
+                        <input class="form-input" type="tel" placeholder="Введите ваш номер телефона" id="tel" name="tel" required>
+                    
+                        <button class="btn-submit" type="submit" name="call_request">Отправить</button>
+                    </form>
+
+                    <button class="btn-close-popup" onclick="togglePopup()">
+                        Закрыть
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="mailcont">
+                <div class="mailtext">
+                    <img src="images/mail_icon.png" height="20px" class="mail_text">
+                </div>
+                <div class="mail">
+                    <a class="mailnum" href="mailto:stroitrans02@mail.com">stroitrans02@mail.com</a>
+                </div>
+            </div>
+            <div class="phonecont">
+                <div class="pnonelogo">
+                    <img src="images/free-icon-telephone-126341.png" height="20px" class="phone_logo">
+                </div>
+                <div class="phone">
+                    <div class="number">
+                        <a class="num" href="tel:+79677370003">+7-967-737-00-03</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bgimage">
+        <div class="textinfo">Компания Стройтранс предоставляет большой спектр услуг со спецтехникой в Уфе, а также по Республике Башкортостан: снос
+            зданий
+            и
+            сооружений, уборка снега, аренда манипулятора, погрузчика, минипогрузчика.
+        </div>
+        <div class="list">
+            <ul>
+                <li>Высокое качество</li>
+                <li>Оперативное выполнение</li>
+                <li>Операторы с большим опытом работы</li>
+                <li>Более 5 лет на рынке</li>
+                <li>Работаем с НДС/без НДС</li>
+                <li>Аренду на длительный срок</li>
+            </ul>
+        </div>
+    </div>
+    <div class="polotno">
+        <div class="parent">
+            <div class="hidmus">
+                <div class="hidromek">
+                    <div class="hidname">
+                        Hidromek 102b
+                    </div>
+                    <div class="hidimage">
+                        <img src="images/hid_image.png" height="300px">
+                    </div>
+                    <div class="texthid">
+                        <ul>
+                            <li>В наличии вилы, гидромолот, буры(всех диаметров), ковши(40/60см)</li>
+                            <li>Уборка снега, его вывоз</li>
+                            <li>Земельные работы любой сложности</li>
+                            <li>Выравнивание участков, благоустройство территории</li>
+                            <li>Планировка объектов, дорог</li>
+                            <li>Прокладывание(рытье) траншей под коммуникации</li>
+                            <li>Бурение(сверление)</li>
+                            <li>Копание котлованов под фундамент</li>
+                            <li>Корчевание кустарников, пней, жб конструкций</li>
+                            <li>Демонтаж фундаментов и сооружений</li>
+                            <li>Копка траншей, прудов, колодцев, шамбо, септиков, канализаций, сливных ям</li>
+                            <li>Монтаж, демонтаж колец</li>
+                            <li>Минимальное время: 4 часа</li>
+                            <li>3500руб/час(без ндс 3000руб/час)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div clas="mustang">
+                    <div class="musname">
+                        Mustang 2077
+                    </div>
+                    <div class="musimage ">
+                        <img src="images/mus_image.png" height="300px">
+                    </div>
+                    <div class="textmus">
+                        <ul>
+                            <li>В наличии вилы, гидромолот, ковш, щетка</li>
+                            <li>Уборка снега, его вывоз</li>
+                            <li>Отсыпка дорог щебнем</li>
+                            <li>Подвоз материалов (асфальт,щебень,грунт , песок, бетон и т.д)</li>
+                            <li>Расчистка дорог</li>
+                            <li>Погрузка строительного мусора</li>
+                            <li>Вывоз грунта</li>
+                            <li>Разравнивание сыпучых материалов</li>
+                            <li>Локальное перемещение грунта</li>
+                            <li>Выравнивание участка</li>
+                            <li>Уборка мусора</li>
+                            <li>Погрузка материалов</li>
+                            <li>Зачистка барж</li>
+                            <li>Заливка бетона погрузчиком</li>
+                            <li>Доставка оплачивается отдельно</li>
+                            <li>2400руб/час(без ндс 2000руб/час)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="hyundai">
+                <div class="hyutext">
+                    Hyundai
+                </div>
+                <div class="hyuimage">
+                    <img src="images/hui_image.png" height="300px">
+                </div>
+                <div class="texthyu">
+                    <ul>
+                        <li>В наличии люлька, всевозможные стропы</li>
+                        <li>Борт: 5 метров, 5 тонн</li>
+                        <li>Стрела: 12 метров, 3 тонны</li>
+                        <li>Услуги манипулятора</li>
+                        <li>Монтаж металлоконструкций</li>
+                        <li>Перевозка катушек</li>
+                        <li>Перевозки любых грузов</li>
+                        <li>2400руб/час(без ндс 2000руб/час)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="final">
+            <div class="box">
+                <div class="finaltext">
+                    По всем вопросам звоните или пишите на почту
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePopup() {
+            const overlay = document.getElementById('popupOverlay');
+            overlay.classList.toggle('show');
+        } 
+    </script>
+    <script>
+        function showNotification(message) {
+            var notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.position = 'fixed';
+            notification.style.right = '2%';
+            notification.style.top = '1%';
+            notification.style.backgroundColor = '#4CAF50';
+            notification.style.color = 'white';
+            notification.style.padding = '12px 20px';
+            notification.style.borderRadius = '5px';
+            notification.style.zIndex = '3000';
+            notification.style.maxWidth = '90%';
+            notification.style.textAlign = 'center';
+            notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+            notification.style.fontSize = '16px';
+            notification.style.lineHeight = '1.4';
+        
+            document.body.appendChild(notification);
+            
+            setTimeout(function() {
+                notification.style.transition = 'opacity 0.5s ease-out';
+                notification.style.opacity = '0';
+                setTimeout(function() {
+                    notification.remove();
+                }, 500);
+            }, 3000);
+        }
+        
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var message = urlParams.get('message');
+            if (message) {
+                showNotification(decodeURIComponent(message));
+            }
+        }
+        </script>
+</body>
+
+</html>

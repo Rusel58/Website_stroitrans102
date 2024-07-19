@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="reviews.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="headerline">
+        <div class="menu">
+            <input type="checkbox" id="nav-toggle" hidden>
+            <nav class="nav">
+                <label for="nav-toggle" class="nav-toggle" onclick></label>
+                <h2 class="logo">
+                    <img src="favicon/ms-icon-144x144.png" alt="" height="70px" class="logo_menu">
+                </h2>
+                <ul class="menu_text">
+                    <li><a href="index.html">Главная</a>
+                    <li><a href="about.html">О компании</a>
+                    <li><a href="job.html">Доступные вакансии</a>
+                    <li><a href="reviews.html">Отзывы</a>
+                </ul>
+            </nav>
+        </div>
+        <div class="headerlogo">
+            <img src="favicon/ms-icon-144x144.png" alt="" class="head_logo">
+        </div>
+        <div class="button_to_form">
+            <button class="btn-open-popup" onclick="togglePopup()">
+                Заказать звонок
+            </button>
+            <div id="popupOverlay" class="overlay-container">
+                <div class="popup-box">
+                    <h2 style="color: #ff7d04;" class="make_call">Заказать звонок</h2>
+                    <form class="form-container" method="POST" action="process_forms.php">
+                        <label class="form-label" for="name">Имя:</label>
+                        <input class="form-input" type="text" placeholder="Введите ваше имя" id="name" name="name" required>
+                    
+                        <label class="form-label" for="tel">Номер телефона:</label>
+                        <input class="form-input" type="tel" placeholder="Введите ваш номер телефона" id="tel" name="tel" required>
+                    
+                        <button class="btn-submit" type="submit" name="call_request">Отправить</button>
+                    </form>
+
+                    <button class="btn-close-popup" onclick="togglePopup()">
+                        Закрыть
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="mailcont">
+                <div class="mailtext">
+                    <img src="images/mail_icon.png" height="20px" class="mail_text">
+                </div>
+                <div class="mail">
+                    <a class="mailnum" href="mailto:stroitrans02@mail.com">stroitrans02@mail.com</a>
+                </div>
+            </div>
+            <div class="phonecont">
+                <div class="pnonelogo">
+                    <img src="images/free-icon-telephone-126341.png" height="20px" class="phone_logo">
+                </div>
+                <div class="phone">
+                    <div class="number">
+                        <a class="num" href="tel:+79677370003">+7-967-737-00-03</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="polotno">
+        <h1 class="rev_head">Отзывы</h1>
+        <div class="reviews">
+            <div class="first_rev">
+                <div class="first_header">
+                    <img src="images/icons8-аватар-30.png" height="30px" class="icon">
+                    <strong class="name">Анатолий</strong>
+                    <a class="work_type">Вид работы: Уборка снега</a>
+                    <a class="first_date">Дата: 11.12.2023</a>
+                </div>
+                <div class="first_review">
+                    Быстро договорились о времени, хорошо выполнили свою работу.
+                </div>
+            </div>
+            <div class="second_rev">
+                <div class="second_header">
+                    <img src="images/icons8-аватар-30.png" height="30px" class="icon">
+                    <strong class="name">Сергей</strong>
+                    <a class="work_type">Вид работы: Услуги манипулятора</a>
+                    <a class="second_date">Дата: 16.03.2024</a>
+                </div>
+                <div class="second_review">
+                    Предоставили технику вовремя, все как договаривались.
+                </div>
+            </div>
+            <div class="form-box">
+                <div class="textup">
+                    Оставьте свой отзыв
+                </div>
+                <form method="POST" action="process_forms.php">
+                    <label for="uname" class="feedback1">
+                        <i class="fa_fa-solid_fa-user"></i>
+                        Имя
+                    </label>
+                    <input type="text" id="uname" name="uname" required>
+                
+                    <label for="email" class="feedback2">
+                        <i class="fa fa-solid fa-envelope"></i>
+                        Почта
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="msg" class="feedback3">
+                        <i class="fa-solid fa-comments" style="margin-right: 3px;"></i>
+                        Напишите, что вы думаете о нас:
+                    </label>
+                    <textarea id="msg" name="msg" rows="4" cols="10" required></textarea>
+                
+                    <button class="but" type="submit" name="review">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePopup() {
+            const overlay = document.getElementById('popupOverlay');
+            overlay.classList.toggle('show');
+        } 
+    </script>
+</body>
+
+</html>
